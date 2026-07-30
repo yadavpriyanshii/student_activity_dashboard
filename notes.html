@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Write, organize and review your notes.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= NOTES CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="welcome">
+
+                <h2>My Notes 📝</h2>
+
+                <p>
+                    Keep your important study notes organized in one place.
+                </p>
+
+            </section>
+
+
+            <!-- ================= CREATE NOTE ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Create New Note</h2>
+
+                <form id="noteForm">
+
+                    <!-- Note Title -->
+
+                    <input
+                        type="text"
+                        id="noteTitle"
+                        placeholder="Note title"
+                        required
+                    >
+
+
+                    <!-- Subject -->
+
+                    <select id="noteSubject">
+
+                        <option value="">
+                            Select Subject
+                        </option>
+
+                        <option value="Data Structures">
+                            Data Structures
+                        </option>
+
+                        <option value="Discrete Mathematics">
+                            Discrete Mathematics
+                        </option>
+
+                        <option value="Digital Logic">
+                            Digital Logic
+                        </option>
+
+                        <option value="Chemistry">
+                            Chemistry
+                        </option>
+
+                        <option value="Environmental Science">
+                            Environmental Science
+                        </option>
+
+                        <option value="English">
+                            English
+                        </option>
+
+                    </select>
+
+
+                    <!-- Note Content -->
+
+                    <textarea
+                        id="noteContent"
+                        rows="8"
+                        placeholder="Write your notes here..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit">
+                        Save Note
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= SEARCH NOTES ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>My Notes</h2>
+
+                <input
+                    type="search"
+                    id="noteSearch"
+                    placeholder="Search notes..."
+                >
+
+                <select id="noteFilter">
+
+                    <option value="all">
+                        All Subjects
+                    </option>
+
+                    <option value="Data Structures">
+                        Data Structures
+                    </option>
+
+                    <option value="Discrete Mathematics">
+                        Discrete Mathematics
+                    </option>
+
+                    <option value="Digital Logic">
+                        Digital Logic
+                    </option>
+
+                    <option value="Chemistry">
+                        Chemistry
+                    </option>
+
+                    <option value="Environmental Science">
+                        Environmental Science
+                    </option>
+
+                    <option value="English">
+                        English
+                    </option>
+
+                </select>
+
+            </section>
+
+
+            <!-- ================= NOTES LIST ================= -->
+
+            <section class="dashboard-section">
+
+                <div id="notesContainer">
+
+                    <!-- Notes will be added here using JavaScript -->
+
+                    <div class="note-card">
+
+                        <h3>Sample Note</h3>
+
+                        <p>
+                            Your saved notes will appear here.
+                        </p>
+
+                        <span>
+                            Data Structures
+                        </span>
+
+                        <button class="delete-note">
+                            Delete
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

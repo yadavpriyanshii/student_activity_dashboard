@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subjects | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Manage your subjects and academic progress.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= SUBJECT CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- ================= PAGE HEADING ================= -->
+
+            <section class="welcome">
+
+                <h2>My Subjects 📚</h2>
+
+                <p>
+                    Manage your subjects, teachers and academic progress.
+                </p>
+
+            </section>
+
+
+            <!-- ================= SUBJECT SUMMARY ================= -->
+
+            <section class="dashboard-section">
+
+                <div class="summary">
+
+                    <div class="card">
+
+                        <h3>Total Subjects</h3>
+
+                        <p id="totalSubjects">
+                            6
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Total Credits</h3>
+
+                        <p id="totalCredits">
+                            18
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Current Semester</h3>
+
+                        <p id="currentSemester">
+                            2
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ADD SUBJECT ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Add New Subject</h2>
+
+                <form id="subjectForm">
+
+
+                    <!-- Subject Name -->
+
+                    <input
+                        type="text"
+                        id="subjectName"
+                        placeholder="Subject name"
+                        required
+                    >
+
+
+                    <!-- Teacher -->
+
+                    <input
+                        type="text"
+                        id="teacherName"
+                        placeholder="Teacher / Professor"
+                    >
+
+
+                    <!-- Credits -->
+
+                    <input
+                        type="number"
+                        id="subjectCredits"
+                        placeholder="Credits"
+                        min="1"
+                        max="10"
+                        required
+                    >
+
+
+                    <!-- Semester -->
+
+                    <select id="subjectSemester" required>
+
+                        <option value="">
+                            Select Semester
+                        </option>
+
+                        <option value="1">
+                            Semester 1
+                        </option>
+
+                        <option value="2">
+                            Semester 2
+                        </option>
+
+                        <option value="3">
+                            Semester 3
+                        </option>
+
+                        <option value="4">
+                            Semester 4
+                        </option>
+
+                        <option value="5">
+                            Semester 5
+                        </option>
+
+                        <option value="6">
+                            Semester 6
+                        </option>
+
+                        <option value="7">
+                            Semester 7
+                        </option>
+
+                        <option value="8">
+                            Semester 8
+                        </option>
+
+                    </select>
+
+
+                    <!-- Color -->
+
+                    <label for="subjectColor">
+                        Subject Color
+                    </label>
+
+                    <input
+                        type="color"
+                        id="subjectColor"
+                        value="#2563eb"
+                    >
+
+
+                    <button type="submit">
+                        Add Subject
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= SUBJECT LIST ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>My Subjects</h2>
+
+
+                <div id="subjectsContainer">
+
+
+                    <!-- ================= SAMPLE SUBJECT ================= -->
+
+                    <div class="subject-card">
+
+                        <div class="subject-header">
+
+                            <h3>
+                                Data Structures
+                            </h3>
+
+                            <span>
+                                4 Credits
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            👨‍🏫 Professor: Your Professor
+                        </p>
+
+                        <p>
+                            📚 Semester: 2
+                        </p>
+
+
+                        <!-- Subject Progress -->
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 70%;">
+                                </div>
+
+                            </div>
+
+                            <p>
+                                70% Progress
+                            </p>
+
+                        </div>
+
+
+                        <!-- Subject Actions -->
+
+                        <div class="subject-actions">
+
+                            <button class="view-subject">
+                                View Details
+                            </button>
+
+                            <button class="edit-subject">
+                                Edit
+                            </button>
+
+                            <button class="delete-subject">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ================= SECOND SAMPLE ================= -->
+
+                    <div class="subject-card">
+
+                        <div class="subject-header">
+
+                            <h3>
+                                Discrete Mathematics
+                            </h3>
+
+                            <span>
+                                4 Credits
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            👨‍🏫 Professor: Your Professor
+                        </p>
+
+                        <p>
+                            📚 Semester: 2
+                        </p>
+
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 55%;">
+                                </div>
+
+                            </div>
+
+                            <p>
+                                55% Progress
+                            </p>
+
+                        </div>
+
+
+                        <div class="subject-actions">
+
+                            <button class="view-subject">
+                                View Details
+                            </button>
+
+                            <button class="edit-subject">
+                                Edit
+                            </button>
+
+                            <button class="delete-subject">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SUBJECT DETAILS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Subject Overview</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Subject</th>
+                            <th>Credits</th>
+                            <th>Tasks</th>
+                            <th>Notes</th>
+                            <th>Progress</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Data Structures
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+                                8
+                            </td>
+
+                            <td>
+                                5
+                            </td>
+
+                            <td>
+                                70%
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Discrete Mathematics
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+                                6
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+                                55%
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

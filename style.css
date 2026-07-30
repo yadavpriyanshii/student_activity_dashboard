@@ -1,0 +1,1013 @@
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    body {
+    font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+    background-image:
+        linear-gradient(
+            rgba(244, 246, 248, 0.92),
+            rgba(244, 246, 248, 0.92)
+        ),
+        url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #1f2937;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 25px 40px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+}
+
+header p {
+    color: #6b7280;
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   MAIN LAYOUT
+===================================================== */
+
+main {
+    display: flex;
+
+    max-width: 1400px;
+
+    margin: 25px auto;
+
+    padding: 0 20px;
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+aside {
+    width: 230px;
+
+    flex-shrink: 0;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-radius: 15px;
+
+    padding: 25px 15px;
+
+    height: fit-content;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+aside h2 {
+    font-size: 20px;
+
+    margin-bottom: 20px;
+
+    padding-left: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 6px;
+}
+
+nav a {
+    display: block;
+
+    text-decoration: none;
+
+    color: #374151;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    background: #eef2ff;
+
+    color: #2563eb;
+
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   DASHBOARD CONTENT
+===================================================== */
+
+.dashboard-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+/* =====================================================
+   WELCOME SECTION
+===================================================== */
+
+.welcome {
+    background-image:
+        linear-gradient(
+            rgba(30, 41, 59, 0.78),
+            rgba(30, 41, 59, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+    padding: 45px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.welcome h2 {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+
+    color: white;
+}
+
+.welcome p {
+    color: #e5e7eb;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   SUMMARY CARDS
+===================================================== */
+
+.summary {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.card h3 {
+    font-size: 15px;
+
+    color: #6b7280;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+.card span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
+.dashboard-section {
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+
+    border: 1px solid #e5e7eb;
+}
+
+.dashboard-section h2 {
+    margin-bottom: 20px;
+
+    font-size: 21px;
+}
+
+
+/* =====================================================
+   SECTION HEADER
+===================================================== */
+
+.section-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.section-header a {
+    text-decoration: none;
+
+    color: #2563eb;
+
+    font-size: 14px;
+}
+
+.section-header a:hover {
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   FORMS
+===================================================== */
+
+form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-family: inherit;
+
+    background: white;
+
+    color: #1f2937;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+
+    min-height: 150px;
+}
+
+label {
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-family: inherit;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.quick-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.quick-actions a {
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   TABLES
+===================================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 600px;
+}
+
+th,
+td {
+    padding: 14px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background: #f9fafb;
+
+    font-size: 14px;
+
+    color: #374151;
+}
+
+td {
+    font-size: 14px;
+
+    color: #4b5563;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+
+/* =====================================================
+   TASKS
+===================================================== */
+
+.task-filters {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+}
+
+.task-filters button {
+    background: #e5e7eb;
+
+    color: #374151;
+}
+
+.task-filters button:hover {
+    background: #dbeafe;
+
+    color: #2563eb;
+}
+
+#taskList {
+    list-style: none;
+}
+
+#taskList li {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    background: #fafafa;
+}
+
+
+/* =====================================================
+   NOTES
+===================================================== */
+
+#notesContainer {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.note-card {
+    background: #fff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.note-card h3 {
+    margin-bottom: 10px;
+}
+
+.note-card p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.note-card span {
+    display: inline-block;
+
+    background: #eef2ff;
+
+    color: #2563eb;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+.delete-note {
+    display: block;
+
+    background: #ef4444;
+}
+
+.delete-note:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   POMODORO
+===================================================== */
+
+.timer-section {
+    text-align: center;
+}
+
+.timer-section h2 {
+    color: #2563eb;
+}
+
+#timerDisplay {
+    font-size: 80px;
+
+    font-weight: bold;
+
+    margin: 25px 0;
+
+    letter-spacing: 3px;
+}
+
+.timer-controls {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =====================================================
+   PROGRESS
+===================================================== */
+
+.progress-container {
+    margin-top: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 12px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+
+    transition: width 0.4s ease;
+}
+
+.progress-container p {
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   WEEKLY PROGRESS
+===================================================== */
+
+.weekly-progress {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.day-progress {
+    display: grid;
+
+    grid-template-columns: 50px 1fr;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.day-progress span {
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+.mini-progress {
+    height: 10px;
+
+    background: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.mini-progress-fill {
+    height: 100%;
+
+    background: #2563eb;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   ACHIEVEMENTS
+===================================================== */
+
+.achievements {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.achievement-card {
+    padding: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #fafafa;
+}
+
+.achievement-card h3 {
+    margin-bottom: 8px;
+}
+
+.achievement-card p {
+    color: #6b7280;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   GOALS
+===================================================== */
+
+.goal-card {
+    padding: 22px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+
+    background: #fafafa;
+}
+
+.goal-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 12px;
+}
+
+.goal-category {
+    background: #eef2ff;
+
+    color: #2563eb;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.goal-actions,
+.subject-actions,
+.settings-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.delete-goal,
+.delete-subject {
+    background: #ef4444;
+}
+
+.delete-goal:hover,
+.delete-subject:hover {
+    background: #dc2626;
+}
+
+
+/* =====================================================
+   SUBJECTS
+===================================================== */
+
+#subjectsContainer {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.subject-card {
+    padding: 22px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    background: #fafafa;
+}
+
+.subject-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+.subject-header span {
+    font-size: 12px;
+
+    background: #eef2ff;
+
+    color: #2563eb;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+}
+
+.subject-card p {
+    color: #6b7280;
+
+    margin-bottom: 8px;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+.dashboard-section > p {
+    color: #6b7280;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+.dashboard-section label {
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.dashboard-section label input[type="checkbox"] {
+    width: auto;
+
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.quote {
+    background: rgba(255, 255, 255, 0.95);
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.quote p {
+    font-style: italic;
+
+    color: #6b7280;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+    nav li {
+        margin-bottom: 0;
+    }
+
+    nav a {
+        padding: 9px 11px;
+    }
+
+    .summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #notesContainer,
+    #subjectsContainer {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .summary {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome {
+        padding: 30px 20px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .dashboard-section {
+        padding: 18px;
+    }
+
+    #timerDisplay {
+        font-size: 55px;
+    }
+
+    .goal-header,
+    .subject-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+    .dark-mode {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(99, 102, 241, 0.12),
+            transparent 30%
+        ),
+        #0f172a;
+
+    color: #e5e7eb;
+}
+
+
+}

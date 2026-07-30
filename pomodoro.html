@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pomodoro | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Focus better. Study smarter.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= POMODORO CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="welcome">
+
+                <h2>Pomodoro Timer ⏱️</h2>
+
+                <p>
+                    Focus on one task at a time and take regular breaks.
+                </p>
+
+            </section>
+
+
+            <!-- ================= TIMER ================= -->
+
+            <section class="dashboard-section timer-section">
+
+                <h2 id="timerMode">
+                    Focus Time
+                </h2>
+
+
+                <div id="timerDisplay">
+                    25:00
+                </div>
+
+
+                <!-- Timer Controls -->
+
+                <div class="timer-controls">
+
+                    <button id="startTimer">
+                        Start
+                    </button>
+
+                    <button id="pauseTimer">
+                        Pause
+                    </button>
+
+                    <button id="resetTimer">
+                        Reset
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SESSION SETTINGS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Session Settings</h2>
+
+                <form id="timerSettings">
+
+                    <label for="focusDuration">
+                        Focus Duration (minutes)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="focusDuration"
+                        value="25"
+                        min="1"
+                        max="120"
+                    >
+
+
+                    <label for="breakDuration">
+                        Break Duration (minutes)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="breakDuration"
+                        value="5"
+                        min="1"
+                        max="60"
+                    >
+
+
+                    <button type="submit">
+                        Save Settings
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= SESSION STATISTICS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Today's Study Sessions</h2>
+
+                <div class="summary">
+
+                    <div class="card">
+
+                        <h3>Sessions</h3>
+
+                        <p id="sessionCount">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Focus Time</h3>
+
+                        <p id="focusTime">
+                            0 min
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Current Streak</h3>
+
+                        <p id="studyStreak">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= STUDY TIPS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Focus Tips 💡</h2>
+
+                <ul>
+
+                    <li>
+                        Keep your phone away while studying.
+                    </li>
+
+                    <li>
+                        Choose one specific task before starting.
+                    </li>
+
+                    <li>
+                        Avoid switching between subjects during a session.
+                    </li>
+
+                    <li>
+                        Use your break to move around and rest your eyes.
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

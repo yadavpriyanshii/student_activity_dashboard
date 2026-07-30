@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Manage your tasks and stay organized.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= TASK CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+            <!-- Page Heading -->
+
+            <section class="welcome">
+
+                <h2>My Tasks ✅</h2>
+
+                <p>
+                    Add, organize and complete your daily tasks.
+                </p>
+
+            </section>
+
+
+            <!-- ================= ADD TASK ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Add New Task</h2>
+
+                <form id="taskForm">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                        required
+                    >
+
+
+                    <select id="taskPriority">
+
+                        <option value="low">
+                            Low Priority
+                        </option>
+
+                        <option value="medium" selected>
+                            Medium Priority
+                        </option>
+
+                        <option value="high">
+                            High Priority
+                        </option>
+
+                    </select>
+
+
+                    <input
+                        type="date"
+                        id="taskDate"
+                    >
+
+
+                    <button type="submit">
+                        Add Task
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= TASK FILTER ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>My Tasks</h2>
+
+                <div class="task-filters">
+
+                    <button id="allTasks">
+                        All
+                    </button>
+
+                    <button id="pendingTasks">
+                        Pending
+                    </button>
+
+                    <button id="completedTasksFilter">
+                        Completed
+                    </button>
+
+                </div>
+
+
+                <!-- Task List -->
+
+                <ul id="taskList">
+
+                    <!-- JavaScript will add tasks here -->
+
+                </ul>
+
+            </section>
+
+
+            <!-- ================= TASK SUMMARY ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Task Summary</h2>
+
+                <div class="summary">
+
+                    <div class="card">
+
+                        <h3>Total</h3>
+
+                        <p id="totalTasks">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Completed</h3>
+
+                        <p id="completedTasks">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Pending</h3>
+
+                        <p id="pendingTaskCount">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

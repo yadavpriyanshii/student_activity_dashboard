@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Goals | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Set goals. Track progress. Stay consistent.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= GOALS CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- ================= PAGE HEADING ================= -->
+
+            <section class="welcome">
+
+                <h2>My Goals 🎯</h2>
+
+                <p>
+                    Set meaningful goals and track your progress.
+                </p>
+
+            </section>
+
+
+            <!-- ================= GOAL SUMMARY ================= -->
+
+            <section class="dashboard-section">
+
+                <div class="summary">
+
+                    <div class="card">
+
+                        <h3>Total Goals</h3>
+
+                        <p id="totalGoals">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Active</h3>
+
+                        <p id="activeGoals">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Completed</h3>
+
+                        <p id="completedGoals">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ADD GOAL ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Create New Goal</h2>
+
+                <form id="goalForm">
+
+
+                    <!-- Goal Name -->
+
+                    <input
+                        type="text"
+                        id="goalTitle"
+                        placeholder="Enter your goal"
+                        required
+                    >
+
+
+                    <!-- Category -->
+
+                    <select id="goalCategory" required>
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                        <option value="Academic">
+                            📚 Academic
+                        </option>
+
+                        <option value="Coding">
+                            💻 Coding
+                        </option>
+
+                        <option value="Personal">
+                            🌱 Personal
+                        </option>
+
+                        <option value="Health">
+                            🏃 Health
+                        </option>
+
+                    </select>
+
+
+                    <!-- Deadline -->
+
+                    <label for="goalDeadline">
+                        Deadline
+                    </label>
+
+                    <input
+                        type="date"
+                        id="goalDeadline"
+                        required
+                    >
+
+
+                    <!-- Target -->
+
+                    <label for="goalTarget">
+                        Target
+                    </label>
+
+                    <input
+                        type="number"
+                        id="goalTarget"
+                        placeholder="e.g. 50"
+                        min="1"
+                        required
+                    >
+
+
+                    <!-- Unit -->
+
+                    <select id="goalUnit">
+
+                        <option value="tasks">
+                            Tasks
+                        </option>
+
+                        <option value="hours">
+                            Hours
+                        </option>
+
+                        <option value="sessions">
+                            Study Sessions
+                        </option>
+
+                        <option value="problems">
+                            Problems
+                        </option>
+
+                    </select>
+
+
+                    <button type="submit">
+                        Add Goal
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= ACTIVE GOALS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Active Goals</h2>
+
+                <div id="goalsContainer">
+
+
+                    <!-- Sample Goal -->
+
+                    <div class="goal-card">
+
+                        <div class="goal-header">
+
+                            <h3>
+                                Complete 50 LeetCode Problems
+                            </h3>
+
+                            <span class="goal-category">
+                                💻 Coding
+                            </span>
+
+                        </div>
+
+
+                        <p>
+                            Deadline:
+                            <strong>30 August 2026</strong>
+                        </p>
+
+
+                        <!-- Progress -->
+
+                        <div class="progress-container">
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 40%;">
+                                </div>
+
+                            </div>
+
+                            <p>
+                                20 / 50 problems
+                            </p>
+
+                        </div>
+
+
+                        <!-- Actions -->
+
+                        <div class="goal-actions">
+
+                            <button class="update-goal">
+                                Update Progress
+                            </button>
+
+                            <button class="complete-goal">
+                                Mark Complete
+                            </button>
+
+                            <button class="delete-goal">
+                                Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= COMPLETED GOALS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Completed Goals 🏆</h2>
+
+                <div id="completedGoalsContainer">
+
+                    <p>
+                        No goals completed yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

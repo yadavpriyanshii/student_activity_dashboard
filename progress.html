@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Progress | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Track your progress and improve your consistency.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= PROGRESS CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- ================= PAGE HEADING ================= -->
+
+            <section class="welcome">
+
+                <h2>My Progress 📊</h2>
+
+                <p>
+                    See how consistently you are completing your tasks
+                    and study sessions.
+                </p>
+
+            </section>
+
+
+            <!-- ================= OVERALL STATISTICS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Overall Statistics</h2>
+
+                <div class="summary">
+
+                    <div class="card">
+
+                        <h3>Total Tasks</h3>
+
+                        <p id="progressTotalTasks">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Completed Tasks</h3>
+
+                        <p id="progressCompletedTasks">
+                            0
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Study Time</h3>
+
+                        <p id="progressStudyTime">
+                            0 hrs
+                        </p>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <h3>Study Sessions</h3>
+
+                        <p id="progressSessions">
+                            0
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TASK COMPLETION ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Task Completion</h2>
+
+                <div class="progress-container">
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="taskProgress"
+                            class="progress-fill"
+                            style="width: 0%;">
+                        </div>
+
+                    </div>
+
+                    <p id="taskProgressText">
+                        0% completed
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= WEEKLY PROGRESS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Weekly Activity</h2>
+
+                <div class="weekly-progress">
+
+                    <div class="day-progress">
+
+                        <span>Mon</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 70%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Tue</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 50%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Wed</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 80%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Thu</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 40%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Fri</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 60%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Sat</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 30%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="day-progress">
+
+                        <span>Sun</span>
+
+                        <div class="mini-progress">
+                            <div
+                                class="mini-progress-fill"
+                                style="width: 20%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= SUBJECT PROGRESS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Subject Progress</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Subject</th>
+                            <th>Tasks</th>
+                            <th>Completed</th>
+                            <th>Progress</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Data Structures
+                            </td>
+
+                            <td>
+                                10
+                            </td>
+
+                            <td>
+                                7
+                            </td>
+
+                            <td>
+                                70%
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Discrete Mathematics
+                            </td>
+
+                            <td>
+                                8
+                            </td>
+
+                            <td>
+                                5
+                            </td>
+
+                            <td>
+                                62%
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Digital Logic
+                            </td>
+
+                            <td>
+                                6
+                            </td>
+
+                            <td>
+                                4
+                            </td>
+
+                            <td>
+                                66%
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- ================= ACHIEVEMENTS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Achievements 🏆</h2>
+
+                <div class="achievements">
+
+                    <div class="achievement-card">
+
+                        <h3>🔥 First Session</h3>
+
+                        <p>
+                            Complete your first Pomodoro session.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement-card">
+
+                        <h3>✅ Task Master</h3>
+
+                        <p>
+                            Complete 10 tasks.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement-card">
+
+                        <h3>📚 Consistent Learner</h3>
+
+                        <p>
+                            Study for 5 days in a row.
+                        </p>
+
+                    </div>
+
+
+                    <div class="achievement-card">
+
+                        <h3>🎯 Goal Setter</h3>
+
+                        <p>
+                            Complete your first goal.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

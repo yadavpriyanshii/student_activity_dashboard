@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Customize your productivity workspace.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= SETTINGS CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- ================= PAGE HEADING ================= -->
+
+            <section class="welcome">
+
+                <h2>Settings ⚙️</h2>
+
+                <p>
+                    Customize your dashboard and manage your data.
+                </p>
+
+            </section>
+
+
+            <!-- ================= PROFILE SETTINGS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Profile</h2>
+
+                <form id="profileForm">
+
+                    <label for="userName">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="userName"
+                        placeholder="Enter your name"
+                    >
+
+
+                    <label for="userCollege">
+                        College / University
+                    </label>
+
+                    <input
+                        type="text"
+                        id="userCollege"
+                        placeholder="Enter your college"
+                    >
+
+
+                    <label for="userCourse">
+                        Course
+                    </label>
+
+                    <input
+                        type="text"
+                        id="userCourse"
+                        placeholder="e.g. B.Tech CSE"
+                    >
+
+
+                    <button type="submit">
+                        Save Profile
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= APPEARANCE ================= -->
+
+
+            <!-- ================= NOTIFICATIONS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Notifications 🔔</h2>
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="taskReminder"
+                        checked
+                    >
+
+                    Task reminders
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="studyReminder"
+                        checked
+                    >
+
+                    Study session reminders
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="goalReminder"
+                    >
+
+                    Goal deadline reminders
+
+                </label>
+
+            </section>
+
+
+            <!-- ================= DEFAULT SETTINGS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Default Preferences</h2>
+
+                <label for="defaultFocusTime">
+                    Default Pomodoro Focus Time
+                </label>
+
+                <input
+                    type="number"
+                    id="defaultFocusTime"
+                    value="25"
+                    min="1"
+                    max="120"
+                >
+
+
+                <label for="defaultBreakTime">
+                    Default Break Time
+                </label>
+
+                <input
+                    type="number"
+                    id="defaultBreakTime"
+                    value="5"
+                    min="1"
+                    max="60"
+                >
+
+            </section>
+
+
+            <!-- ================= DATA MANAGEMENT ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Data Management 💾</h2>
+
+                <p>
+                    Your tasks, notes, goals and timetable data
+                    will be stored locally in your browser.
+                </p>
+
+
+                <div class="settings-actions">
+
+                    <button id="exportData">
+                        Export Data
+                    </button>
+
+
+                    <button id="importData">
+                        Import Data
+                    </button>
+
+
+                    <button id="clearData">
+                        Clear All Data
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= ABOUT ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>About</h2>
+
+                <p>
+                    Student Productivity Dashboard
+                </p>
+
+                <p>
+                    Version 1.0
+                </p>
+
+                <p>
+                    A simple productivity tool for students
+                    to manage tasks, schedules, notes and goals.
+                </p>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

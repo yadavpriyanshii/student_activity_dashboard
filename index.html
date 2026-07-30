@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Stay organized. Stay consistent.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= DASHBOARD CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- Welcome -->
+
+            <section class="welcome">
+
+                <h2>Welcome Back! 👋</h2>
+
+                <p>
+                    Here's an overview of your productivity today.
+                </p>
+
+            </section>
+
+
+            <!-- ================= SUMMARY CARDS ================= -->
+
+            <section class="summary">
+
+                <div class="card">
+
+                    <h3>Tasks</h3>
+
+                    <p id="totalTasks">0</p>
+
+                    <span>Total Tasks</span>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Completed</h3>
+
+                    <p id="completedTasks">0</p>
+
+                    <span>Tasks Completed</span>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Study Time</h3>
+
+                    <p id="studyTime">0h</p>
+
+                    <span>This Week</span>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>Goals</h3>
+
+                    <p id="totalGoals">0</p>
+
+                    <span>Active Goals</span>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TODAY'S TASKS ================= -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>Today's Tasks</h2>
+
+                    <a href="tasks.html">View All</a>
+
+                </div>
+
+
+                <ul id="dashboardTaskList">
+
+                    <li>No tasks for today.</li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- ================= TODAY'S TIMETABLE ================= -->
+
+            <section class="dashboard-section">
+
+                <div class="section-header">
+
+                    <h2>Today's Schedule</h2>
+
+                    <a href="timetable.html">View Timetable</a>
+
+                </div>
+
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+                            <td>9:00 AM</td>
+                            <td>Data Structures</td>
+                        </tr>
+
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Discrete Mathematics</td>
+                        </tr>
+
+                        <tr>
+                            <td>2:00 PM</td>
+                            <td>Digital Logic</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- ================= QUICK ACTIONS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Quick Actions</h2>
+
+
+                <div class="quick-actions">
+
+                    <a href="tasks.html">
+                        <button>Add Task</button>
+                    </a>
+
+                    <a href="notes.html">
+                        <button>Write Note</button>
+                    </a>
+
+                    <a href="pomodoro.html">
+                        <button>Start Study Session</button>
+                    </a>
+
+                    <a href="goals.html">
+                        <button>Add Goal</button>
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= MOTIVATION ================= -->
+
+            <section class="quote">
+
+                <p>
+                    "Small progress every day adds up to big results."
+                </p>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>

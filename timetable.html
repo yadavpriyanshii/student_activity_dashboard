@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Timetable | Student Productivity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+    rel="stylesheet"
+>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <h1>Student Productivity Dashboard</h1>
+        <p>Plan your classes and study schedule.</p>
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main>
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside>
+
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html">🏠 Dashboard</a>
+                    </li>
+
+                    <li>
+                        <a href="tasks.html">✅ Tasks</a>
+                    </li>
+
+                    <li>
+                        <a href="timetable.html">📅 Timetable</a>
+                    </li>
+
+                    <li>
+                        <a href="subjects.html">📚 Subjects</a>
+                    </li>
+
+                    <li>
+                        <a href="notes.html">📝 Notes</a>
+                    </li>
+
+                    <li>
+                        <a href="pomodoro.html">⏱️ Pomodoro</a>
+                    </li>
+
+                    <li>
+                        <a href="goals.html">🎯 Goals</a>
+                    </li>
+
+                    <li>
+                        <a href="progress.html">📊 Progress</a>
+                    </li>
+
+                    <li>
+                        <a href="settings.html">⚙️ Settings</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= TIMETABLE CONTENT ================= -->
+
+        <section class="dashboard-content">
+
+
+            <!-- Page Heading -->
+
+            <section class="welcome">
+
+                <h2>My Timetable 📅</h2>
+
+                <p>
+                    Plan your weekly classes and study sessions.
+                </p>
+
+            </section>
+
+
+            <!-- ================= ADD CLASS ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Add Class</h2>
+
+                <form id="timetableForm">
+
+                    <!-- Day -->
+
+                    <select id="day" required>
+
+                        <option value="">
+                            Select Day
+                        </option>
+
+                        <option value="Monday">
+                            Monday
+                        </option>
+
+                        <option value="Tuesday">
+                            Tuesday
+                        </option>
+
+                        <option value="Wednesday">
+                            Wednesday
+                        </option>
+
+                        <option value="Thursday">
+                            Thursday
+                        </option>
+
+                        <option value="Friday">
+                            Friday
+                        </option>
+
+                        <option value="Saturday">
+                            Saturday
+                        </option>
+
+                    </select>
+
+
+                    <!-- Time -->
+
+                    <input
+                        type="time"
+                        id="classTime"
+                        required
+                    >
+
+
+                    <!-- Subject -->
+
+                    <input
+                        type="text"
+                        id="subject"
+                        placeholder="Subject"
+                        required
+                    >
+
+
+                    <!-- Room -->
+
+                    <input
+                        type="text"
+                        id="room"
+                        placeholder="Room / Location"
+                    >
+
+
+                    <button type="submit">
+                        Add Class
+                    </button>
+
+                </form>
+
+            </section>
+
+
+            <!-- ================= WEEKLY TIMETABLE ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Weekly Schedule</h2>
+
+                <div class="table-container">
+
+                    <table id="timetable">
+
+                        <thead>
+
+                            <tr>
+                                <th>Day</th>
+                                <th>Time</th>
+                                <th>Subject</th>
+                                <th>Room</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody id="timetableBody">
+
+                            <!-- Classes will be added using JavaScript -->
+
+                            <tr>
+                                <td>Monday</td>
+                                <td>09:00 AM</td>
+                                <td>Data Structures</td>
+                                <td>Room 201</td>
+                                <td>
+                                    <button class="delete-class">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Tuesday</td>
+                                <td>11:00 AM</td>
+                                <td>Discrete Mathematics</td>
+                                <td>Room 105</td>
+                                <td>
+                                    <button class="delete-class">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>Wednesday</td>
+                                <td>02:00 PM</td>
+                                <td>Digital Logic</td>
+                                <td>Lab 2</td>
+                                <td>
+                                    <button class="delete-class">
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TODAY'S CLASSES ================= -->
+
+            <section class="dashboard-section">
+
+                <h2>Today's Classes</h2>
+
+                <div id="todayClasses">
+
+                    <p>
+                        No classes scheduled for today.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Student Productivity Dashboard
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
